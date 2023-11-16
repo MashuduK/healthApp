@@ -1,0 +1,194 @@
+﻿@model healthApp.Models.Nutrition.Biochemicals
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #e1e1e1;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h4 {
+            text-align: center;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-check {
+            margin-bottom: 10px;
+        }
+
+            .form-check input {
+                margin-right: 10px;
+            }
+
+        .btn-primary {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+            }
+
+        .link-back {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Biochemicals</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SmokingFrequency)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SmokingFrequency)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.uricAcid)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.uricAcid)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.cholesterol)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.cholesterol)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.totalProtein)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.totalProtein)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.albumin)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.albumin)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.globulin)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.globulin)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.amylase)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.amylase)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.lipase)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.lipase)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.hemoglobin)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.hemoglobin)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.sodium)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.sodium)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.potassium)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.potassium)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.calcium)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.calcium)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.magnesium)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.magnesium)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ammonia)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ammonia)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.bleedingTime)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.bleedingTime)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.clottingTime)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.clottingTime)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PatientInfo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PatientInfoID)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="BioID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back</a>
+    </form>
+</div>
+</body>
+</html>

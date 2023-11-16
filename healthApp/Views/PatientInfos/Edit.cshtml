@@ -1,0 +1,229 @@
+﻿@model healthApp.Models.Nutrition.PatientInfo
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #e1e1e1;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h4 {
+            text-align: center;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-check {
+            margin-bottom: 10px;
+        }
+
+            .form-check input {
+                margin-right: 10px;
+            }
+
+        .btn-primary {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+            }
+
+        .link-back {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #e1e1e1;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h4 {
+            text-align: center;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-check {
+            margin-bottom: 10px;
+        }
+
+            .form-check input {
+                margin-right: 10px;
+            }
+
+        .btn-primary {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+            }
+
+        .link-back {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h4>PatientInfo</h4>
+<hr />
+<div class="row">
+    <div class="container">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="PatientInfoID" />
+            <div class="form-group">
+                <label asp-for="FirstName" class="control-label"></label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName" class="control-label"></label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sex" class="control-label"></label>
+                <input asp-for="Sex" class="form-control" />
+                <span asp-validation-for="Sex" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Birthday" class="control-label"></label>
+                <input asp-for="Birthday" class="form-control" />
+                <span asp-validation-for="Birthday" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Address" class="control-label"></label>
+                <input asp-for="Address" class="form-control" />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContactNumber" class="control-label"></label>
+                <input asp-for="ContactNumber" class="form-control" />
+                <span asp-validation-for="ContactNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Citizenship" class="control-label"></label>
+                <input asp-for="Citizenship" class="form-control" />
+                <span asp-validation-for="Citizenship" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ward" class="control-label"></label>
+                <input asp-for="Ward" class="form-control" />
+                <span asp-validation-for="Ward" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Room" class="control-label"></label>
+                <input asp-for="Room" class="form-control" />
+                <span asp-validation-for="Room" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AttendingDoctor" class="control-label"></label>
+                <input asp-for="AttendingDoctor" class="form-control" />
+                <span asp-validation-for="AttendingDoctor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Dietitian" class="control-label"></label>
+                <input asp-for="Dietitian" class="form-control" />
+                <span asp-validation-for="Dietitian" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NextOfKin" class="control-label"></label>
+                <input asp-for="NextOfKin" class="form-control" />
+                <span asp-validation-for="NextOfKin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NextOfKinNumber" class="control-label"></label>
+                <input asp-for="NextOfKinNumber" class="form-control" />
+                <span asp-validation-for="NextOfKinNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AdmissionDate" class="control-label"></label>
+                <input asp-for="AdmissionDate" class="form-control" />
+                <span asp-validation-for="AdmissionDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+                    <a asp-action="Details2" asp-controller="PatientInfos" asp-route-PatientInfoID="@Model.PatientInfoID">Back</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+   
+</div>
+
+</body>
+</html>

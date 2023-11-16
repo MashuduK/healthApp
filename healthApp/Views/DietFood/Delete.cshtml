@@ -1,0 +1,148 @@
+﻿@model healthApp.Models.Nutrition.FoodExchange
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #e1e1e1;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h4 {
+            text-align: center;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-check {
+            margin-bottom: 10px;
+        }
+
+            .form-check input {
+                margin-right: 10px;
+            }
+
+        .btn-primary {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+            }
+
+        .link-back {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h3>Are you sure you want to delete these Diet Items for Patient ID: @Model.PatientInfoID?</h3>
+    <div>
+        <h4>Diet Items</h4>
+        <hr />
+        <div class="container">
+
+
+            <dl class="row">
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.DietDiscription)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.DietDiscription)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Breakfast)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Breakfast)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.AMSnack)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.AMSnack)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Lunch)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Lunch)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.PMSnack)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.PMSnack)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.DinnerSupper)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.DinnerSupper)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.TotalItems)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.TotalItems)
+                </dd>
+                @*<dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.PatientInfo)
+                </dt>
+                <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.PatientInfo.Address)
+                </dd>*@
+            </dl>
+
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="FoodExchangeID" />
+                <input type="submit" value="Delete" class="btn btn-danger" /> |
+                <<<<<<<< HEAD:E-NompiloHospital/Views/FoodExchange/Delete.cshtml
+                <a asp-action="Index" asp-route-PatientInfoID="@ViewBag.PatientInfoID">Back to List</a>
+                ========
+                <a asp-action="Index" asp-route-PatientInfoID="@ViewBag.PatientInfoID">Back to List</a>
+                >>>>>>>> 740db2fb63259cc335ab68426bc8faea6666ca60:E-NompiloHospital/Views/DietFood/Delete.cshtml
+            </form>
+        </div>
+    </div>
+</body>
+</html>

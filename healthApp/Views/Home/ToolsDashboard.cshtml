@@ -1,0 +1,103 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+    <!-- Header -->
+    <header id="portfolio">
+        <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+        <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+        <div class="w3-container">
+            <h1><b>Tools Manuals</b></h1>
+            <div class="w3-section w3-bottombar w3-padding-16">
+                <span class="w3-margin-right">Filter:</span>
+                <button class="w3-button w3-black">ALL</button>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- First Photo Grid-->
+    <div class="w3-row-padding">
+        <div class="w3-third w3-container w3-margin-bottom">
+            <img src="~/css/Nutrient Analysis Software.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+            <div class="w3-container w3-white">
+                <p><b>Nutrient Analysis Software</b></p>
+                <p>
+                    MyFitnessPal, Cronometer, or Lose It!: These apps help in tracking macronutrients, micronutrients, and caloric intake.
+                    Nutritionist Pro, Food Processor, NutriAdmin: Professional software used by dietitians for in-depth nutrient analysis and meal planning.
+                </p>
+                <a asp-action="MyFitnessManual" asp-controller="Home" >View Manual</a>
+            </div>
+        </div>
+        <div class="w3-third w3-container w3-margin-bottom">
+            <img src="~/css/nthropometric Measurements.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+            <div class="w3-container w3-white">
+                <p><b>Anthropometric Measurements</b></p>
+                <p>
+                    BMI (Body Mass Index): Measures body fat based on height and weight.
+                    Waist Circumference: Indicates abdominal fat and health risks.
+                    Body Fat Percentage: Assesses the proportion of fat in the body.
+                </p>
+                <a asp-action="AnthropometricMeasurements" asp-controller="Home">View Manual</a>
+            </div>
+        </div>
+        <div class="w3-third w3-container">
+            <img src="~/css/Biochemical Assessments.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+            <div class="w3-container w3-white">
+                <p><b>Biochemical Assessments</b></p>
+                <p>
+                    Blood Tests: Measure various biomarkers like cholesterol levels, blood glucose, vitamin and mineral levels, etc.
+                    Hemoglobin A1c: Measures average blood sugar levels over the past 2-3 months.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Second Photo Grid-->
+    <div class="w3-row-padding">
+        <div class="w3-third w3-container w3-margin-bottom">
+            <img src="~/css/Behavioral Assessment Tools.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+            <div class="w3-container w3-white">
+                <p><b>Behavioral Assessment Tools</b></p>
+                <p>
+                    Behavioral Surveys or Questionnaires: Assess lifestyle, eating habits, and attitudes towards food.
+                    Readiness to Change Questionnaires Determine a client's willingness to make dietary changes.
+                </p>
+            </div>
+        </div>
+        <div class="w3-third w3-container w3-margin-bottom">
+            <img src="~/css/Technology and Apps.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+            <div class="w3-container w3-white">
+                <p><b>Technology and Apps</b></p>
+                <p>Wearable Devices: Track physical activity, calories burned, and sometimes heart rate.</p>
+            </div>
+        </div>
+        <div class="w3-third w3-container">
+            <img src="~/css/Food Models and Portion Control Tools.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+            <div class="w3-container w3-white">
+                <p><b>Food Models and Portion Control Tools</b></p>
+                <p>
+                    Food replicas or models: Help demonstrate portion sizes visually.
+                    Measuring Cups/Spoons: Aid in teaching accurate portion control.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pagination -->
+    <div class="w3-center w3-padding-32">
+        <div class="w3-bar">
+            <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+            <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+        </div>
+    </div>
+
+</div>

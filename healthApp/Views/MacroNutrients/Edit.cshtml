@@ -1,0 +1,211 @@
+﻿@model healthApp.Models.Nutrition.MacroNutrients
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #e1e1e1;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h4 {
+            text-align: center;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-check {
+            margin-bottom: 10px;
+        }
+
+            .form-check input {
+                margin-right: 10px;
+            }
+
+        .btn-primary {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+            }
+
+        .link-back {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #e1e1e1;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h4 {
+            text-align: center;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-check {
+            margin-bottom: 10px;
+        }
+
+            .form-check input {
+                margin-right: 10px;
+            }
+
+        .btn-primary {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+            }
+
+        .link-back {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h4>MacroNutrients</h4>
+<hr />
+<div class="row">
+    <div class="container">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="MacroID" />
+            <div class="form-group">
+                <label asp-for="Factor" class="control-label"></label>
+                <input asp-for="Factor" class="form-control" />
+                <span asp-validation-for="Factor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TeriLbw" class="control-label"></label>
+                <input asp-for="TeriLbw" class="form-control" />
+                <span asp-validation-for="TeriLbw" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TeriAbw" class="control-label"></label>
+                <input asp-for="TeriAbw" class="form-control" />
+                <span asp-validation-for="TeriAbw" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TeriCbw" class="control-label"></label>
+                <input asp-for="TeriCbw" class="form-control" />
+                <span asp-validation-for="TeriCbw" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KCal" class="control-label"></label>
+                <input asp-for="KCal" class="form-control" />
+                <span asp-validation-for="KCal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ChongKg" class="control-label"></label>
+                <input asp-for="ChongKg" class="form-control" />
+                <span asp-validation-for="ChongKg" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cho" class="control-label"></label>
+                <input asp-for="Cho" class="form-control" />
+                <span asp-validation-for="Cho" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Chon" class="control-label"></label>
+                <input asp-for="Chon" class="form-control" />
+                <span asp-validation-for="Chon" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Fat" class="control-label"></label>
+                <input asp-for="Fat" class="form-control" />
+                <span asp-validation-for="Fat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+               @* <label asp-for="PatientInfoID" class="control-label"></label>
+                <select asp-for="PatientInfoID" class="form-control" asp-items="ViewBag.PatientInfoID"></select>
+                <span asp-validation-for="PatientInfoID" class="text-danger"></span>*@
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+        <a asp-action="Details2" asp-controller="PatientInfos" asp-route-PatientInfoID="@Model?.PatientInfoID">Back</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+</body>
+</html>

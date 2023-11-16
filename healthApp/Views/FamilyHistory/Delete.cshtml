@@ -1,0 +1,63 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model healthApp.Models.Nutrition.FamilyH
+@{
+    ViewData["Title"] = "Delete Family History";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<h3>Are you sure you want to delete this family history record?</h3>
+
+<table class="table">
+    <tr>
+        <th>Family History ID</th>
+        <td>@Model.FamilyHistoryID</td>
+    </tr>
+    <tr>
+        <th>Cardiovascular Disease</th>
+        <td>@(Model.CardiovascularDisease.HasValue ? (Model.CardiovascularDisease.Value ? "Yes" : "No") : "N/A")</td>
+    </tr>
+    <tr>
+        <th>Neuromuscular Disease</th>
+        <td>@(Model.NeuromuscularDisease.HasValue ? (Model.NeuromuscularDisease.Value ? "Yes" : "No") : "N/A")</td>
+    </tr>
+    <tr>
+        <th>Gastrointestinal Disease</th>
+        <td>@(Model.GastrointestinalDisease.HasValue ? (Model.GastrointestinalDisease.Value ? "Yes" : "No") : "N/A")</td>
+    </tr>
+    <tr>
+        <th>Kidney Disease</th>
+        <td>@(Model.KidneyDisease.HasValue ? (Model.KidneyDisease.Value ? "Yes" : "No") : "N/A")</td>
+    </tr>
+    <tr>
+        <th>Endocrine Disease</th>
+        <td>@(Model.EndocrineDisease.HasValue ? (Model.EndocrineDisease.Value ? "Yes" : "No") : "N/A")</td>
+    </tr>
+    <tr>
+        <th>Diabetes Mellitus Type 1</th>
+        <td>@(Model.DiabetesMellitusType1.HasValue ? (Model.DiabetesMellitusType1.Value ? "Yes" : "No") : "N/A")</td>
+    </tr>
+    <tr>
+        <th>Diabetes Mellitus Type 2</th>
+        <td>@(Model.DiabetesMellitusType2.HasValue ? (Model.DiabetesMellitusType2.Value ? "Yes" : "No") : "N/A")</td>
+    </tr>
+    <tr>
+        <th>Pulmonary Disease</th>
+        <td>@(Model.PulmonaryDisease.HasValue ? (Model.PulmonaryDisease.Value ? "Yes" : "No") : "N/A")</td>
+    </tr>
+    <tr>
+        <th>Cancer</th>
+        <td>@(Model.Cancer.HasValue ? (Model.Cancer.Value ? "Yes" : "No") : "N/A")</td>
+    </tr>
+</table>
+
+@using (Html.BeginForm("Delete", "FamilyHistory", new { id = Model.FamilyHistoryID }, FormMethod.Post))
+{
+    <button type="submit" class="btn btn-danger">Delete</button>
+    @Html.ActionLink("Cancel", "Details", new { id = Model.FamilyHistoryID }, new { @class = "btn btn-secondary" })
+}
+

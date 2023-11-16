@@ -1,0 +1,90 @@
+﻿@model healthApp.Models.Nutrition.MacroNutrients
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>MacroNutrients</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Factor)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Factor)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TeriLbw)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TeriLbw)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TeriAbw)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TeriAbw)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TeriCbw)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TeriCbw)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.KCal)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.KCal)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ChongKg)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ChongKg)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Cho)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Cho)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Chon)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Chon)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Fat)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Fat)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PatientInfoID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PatientInfoID)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="MacroID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
+</body>
+</html>

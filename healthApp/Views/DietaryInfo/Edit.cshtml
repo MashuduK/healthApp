@@ -1,0 +1,145 @@
+﻿@model healthApp.Models.Nutrition.DietaryInfo
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+
+    <h4>DietaryInfo</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="DietaryInfoID" />
+                <div class="form-group">
+                    <label asp-for="BreakfastFood" class="control-label"></label>
+                    <input asp-for="BreakfastFood" class="form-control" />
+                    <span asp-validation-for="BreakfastFood" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="BreakfastMethod" class="control-label"></label>
+                    <input asp-for="BreakfastMethod" class="form-control" />
+                    <span asp-validation-for="BreakfastMethod" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="BreakfastAmount" class="control-label"></label>
+                    <input asp-for="BreakfastAmount" class="form-control" />
+                    <span asp-validation-for="BreakfastAmount" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="BreakfastTotalCalories" class="control-label"></label>
+                    <input asp-for="BreakfastTotalCalories" class="form-control" />
+                    <span asp-validation-for="BreakfastTotalCalories" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="AMSnackFood" class="control-label"></label>
+                    <input asp-for="AMSnackFood" class="form-control" />
+                    <span asp-validation-for="AMSnackFood" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="AMSnackMethod" class="control-label"></label>
+                    <input asp-for="AMSnackMethod" class="form-control" />
+                    <span asp-validation-for="AMSnackMethod" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="AMSnackAmount" class="control-label"></label>
+                    <input asp-for="AMSnackAmount" class="form-control" />
+                    <span asp-validation-for="AMSnackAmount" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="AMSnacktotalclories" class="control-label"></label>
+                    <input asp-for="AMSnacktotalclories" class="form-control" />
+                    <span asp-validation-for="AMSnacktotalclories" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="LunchFood" class="control-label"></label>
+                    <input asp-for="LunchFood" class="form-control" />
+                    <span asp-validation-for="LunchFood" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="LunchMethod" class="control-label"></label>
+                    <input asp-for="LunchMethod" class="form-control" />
+                    <span asp-validation-for="LunchMethod" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="LunchAmount" class="control-label"></label>
+                    <input asp-for="LunchAmount" class="form-control" />
+                    <span asp-validation-for="LunchAmount" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="LunchTotalCalories" class="control-label"></label>
+                    <input asp-for="LunchTotalCalories" class="form-control" />
+                    <span asp-validation-for="LunchTotalCalories" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PMSnackFood" class="control-label"></label>
+                    <input asp-for="PMSnackFood" class="form-control" />
+                    <span asp-validation-for="PMSnackFood" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PMSnackMethod" class="control-label"></label>
+                    <input asp-for="PMSnackMethod" class="form-control" />
+                    <span asp-validation-for="PMSnackMethod" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PMSnackAmout" class="control-label"></label>
+                    <input asp-for="PMSnackAmout" class="form-control" />
+                    <span asp-validation-for="PMSnackAmout" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PMSnackTotalCalories" class="control-label"></label>
+                    <input asp-for="PMSnackTotalCalories" class="form-control" />
+                    <span asp-validation-for="PMSnackTotalCalories" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="DinnerFood" class="control-label"></label>
+                    <input asp-for="DinnerFood" class="form-control" />
+                    <span asp-validation-for="DinnerFood" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="DinnerMethod" class="control-label"></label>
+                    <input asp-for="DinnerMethod" class="form-control" />
+                    <span asp-validation-for="DinnerMethod" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="DinnerAmount" class="control-label"></label>
+                    <input asp-for="DinnerAmount" class="form-control" />
+                    <span asp-validation-for="DinnerAmount" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="DinnerTotalCalories" class="control-label"></label>
+                    <input asp-for="DinnerTotalCalories" class="form-control" />
+                    <span asp-validation-for="DinnerTotalCalories" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                  @*   <label asp-for="PatientInfoID" class="control-label"></label> *@
+                    <input type="hidden" asp-for="PatientInfoID" />
+                   @*  <span asp-validation-for="PatientInfoID" class="text-danger"></span> *@
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Details2" asp-controller="PatientInfos" asp-route-PatientInfoID="@Model.PatientInfoID">Back</a>
+    </div>
+
+    @section Scripts {
+        @{
+            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }
+    }
+</body>
+</html>

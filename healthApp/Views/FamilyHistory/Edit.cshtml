@@ -1,0 +1,125 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model healthApp.Models.Nutrition.FamilyH
+@{
+    ViewData["Title"] = "Edit Family History";
+    
+}
+
+<h2>@ViewData["Title"]</h2>
+
+@using (Html.BeginForm())
+{
+    <table class="table">
+        <tr>
+            <th>Family History ID</th>
+            <td>@Model.FamilyHistoryID</td>
+        </tr>
+        <tr>
+            <th>Cardiovascular Disease</th>
+            <td>
+                @Html.DropDownListFor(m => m.CardiovascularDisease, new List<SelectListItem>
+            {
+            new SelectListItem { Text = "Yes", Value = "true", Selected = Model.CardiovascularDisease.HasValue && Model.CardiovascularDisease.Value },
+            new SelectListItem { Text = "No", Value = "false", Selected = Model.CardiovascularDisease.HasValue && !Model.CardiovascularDisease.Value }
+            }, "Please select an option", new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.CardiovascularDisease, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+        <tr>
+            <th>Neuromuscular Disease</th>
+            <td>
+                @Html.DropDownListFor(m => m.NeuromuscularDisease, new List<SelectListItem>
+            {
+            new SelectListItem { Text = "Yes", Value = "true", Selected = Model.NeuromuscularDisease.HasValue && Model.NeuromuscularDisease.Value },
+            new SelectListItem { Text = "No", Value = "false", Selected = Model.NeuromuscularDisease.HasValue && !Model.NeuromuscularDisease.Value }
+            }, "Please select an option", new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.NeuromuscularDisease, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+        <tr>
+            <th>Gastrointestinal Disease</th>
+            <td>
+                @Html.DropDownListFor(m => m.GastrointestinalDisease, new List<SelectListItem>
+            {
+            new SelectListItem { Text = "Yes", Value = "true", Selected = Model.GastrointestinalDisease.HasValue && Model.GastrointestinalDisease.Value },
+            new SelectListItem { Text = "No", Value = "false", Selected = Model.GastrointestinalDisease.HasValue && !Model.GastrointestinalDisease.Value }
+            }, "Please select an option", new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.GastrointestinalDisease, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+        <tr>
+            <th>Kidney Disease</th>
+            <td>
+                @Html.DropDownListFor(m => m.KidneyDisease, new List<SelectListItem>
+            {
+            new SelectListItem { Text = "Yes", Value = "true", Selected = Model.KidneyDisease.HasValue && Model.KidneyDisease.Value },
+            new SelectListItem { Text = "No", Value = "false", Selected = Model.KidneyDisease.HasValue && !Model.KidneyDisease.Value }
+            }, "Please select an option", new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.KidneyDisease, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+        <tr>
+            <th>Endocrine Disease</th>
+            <td>
+                @Html.DropDownListFor(m => m.EndocrineDisease, new List<SelectListItem>
+            {
+            new SelectListItem { Text = "Yes", Value = "true", Selected = Model.EndocrineDisease.HasValue && Model.EndocrineDisease.Value },
+            new SelectListItem { Text = "No", Value = "false", Selected = Model.EndocrineDisease.HasValue && !Model.EndocrineDisease.Value }
+            }, "Please select an option", new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.EndocrineDisease, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+        <tr>
+            <th>Diabetes Mellitus Type 1</th>
+            <td>
+                @Html.DropDownListFor(m => m.DiabetesMellitusType1, new List<SelectListItem>
+            {
+            new SelectListItem { Text = "Yes", Value = "true", Selected = Model.DiabetesMellitusType1.HasValue && Model.DiabetesMellitusType1.Value },
+            new SelectListItem { Text = "No", Value = "false", Selected = Model.DiabetesMellitusType1.HasValue && !Model.DiabetesMellitusType1.Value }
+            }, "Please select an option", new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.DiabetesMellitusType1, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+        <tr>
+            <th>Diabetes Mellitus Type 2</th>
+            <td>
+                @Html.DropDownListFor(m => m.DiabetesMellitusType2, new List<SelectListItem>
+            {
+            new SelectListItem { Text = "Yes", Value = "true", Selected = Model.DiabetesMellitusType2.HasValue && Model.DiabetesMellitusType2.Value },
+            new SelectListItem { Text = "No", Value = "false", Selected = Model.DiabetesMellitusType2.HasValue && !Model.DiabetesMellitusType2.Value }
+            }, "Please select an option", new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.DiabetesMellitusType2, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+        <tr>
+            <th>Pulmonary Disease</th>
+            <td>
+                @Html.DropDownListFor(m => m.PulmonaryDisease, new List<SelectListItem>
+            {
+            new SelectListItem { Text = "Yes", Value = "true", Selected = Model.PulmonaryDisease.HasValue && Model.PulmonaryDisease.Value },
+            new SelectListItem { Text = "No", Value = "false", Selected = Model.PulmonaryDisease.HasValue && !Model.PulmonaryDisease.Value }
+            }, "Please select an option", new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.PulmonaryDisease, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+        <tr>
+            <th>Cancer</th>
+            <td>
+                @Html.DropDownListFor(m => m.Cancer, new List<SelectListItem>
+            {
+            new SelectListItem { Text = "Yes", Value = "true", Selected = Model.Cancer.HasValue && Model.Cancer.Value },
+            new SelectListItem { Text = "No", Value = "false", Selected = Model.Cancer.HasValue && !Model.Cancer.Value }
+            }, "Please select an option", new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Cancer, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+    </table>
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+    @Html.ActionLink("Cancel", "Details", new { id = Model.FamilyHistoryID }, new { @class = "btn btn-secondary" })
+}
+

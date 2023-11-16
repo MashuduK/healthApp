@@ -1,0 +1,156 @@
+﻿@model healthApp.Models.Nutrition.DietaryInfo
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>DietaryInfo</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BreakfastFood)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BreakfastFood)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BreakfastMethod)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BreakfastMethod)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BreakfastAmount)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BreakfastAmount)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BreakfastTotalCalories)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BreakfastTotalCalories)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AMSnackFood)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AMSnackFood)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AMSnackMethod)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AMSnackMethod)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AMSnackAmount)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AMSnackAmount)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AMSnacktotalclories)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AMSnacktotalclories)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LunchFood)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LunchFood)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LunchMethod)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LunchMethod)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LunchAmount)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LunchAmount)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LunchTotalCalories)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LunchTotalCalories)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PMSnackFood)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PMSnackFood)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PMSnackMethod)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PMSnackMethod)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PMSnackAmout)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PMSnackAmout)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PMSnackTotalCalories)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PMSnackTotalCalories)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DinnerFood)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DinnerFood)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DinnerMethod)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DinnerMethod)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DinnerAmount)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DinnerAmount)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DinnerTotalCalories)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DinnerTotalCalories)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PatientInfoID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PatientInfoID)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="DietaryInfoID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
+</body>
+</html>

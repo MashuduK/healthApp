@@ -1,0 +1,112 @@
+﻿@model healthApp.Models.Nutrition.PatientInfo
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+
+<div>
+    <h4>PatientInfo</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Sex)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Sex)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Birthday)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Birthday)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ContactNumber)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ContactNumber)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Citizenship)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Citizenship)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Ward)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Ward)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Room)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Room)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AttendingDoctor)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AttendingDoctor)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Dietitian)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Dietitian)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NextOfKin)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NextOfKin)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NextOfKinNumber)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NextOfKinNumber)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AdmissionDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AdmissionDate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.PatientInfoID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+        <a asp-action="Details" asp-controller="SocialHistory" asp-route-id="@Model.PatientInfoID">Advance to Social History</a>
+    </div>
+</body>
+</html>

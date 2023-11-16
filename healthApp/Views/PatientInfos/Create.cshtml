@@ -1,0 +1,202 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model healthApp.Models.Nutrition.PatientInfo
+
+@{
+    Layout = null /*"~/Views/Layouts/_NutritionLayout.cshtml"*/;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #e1e1e1;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h4 {
+            text-align: center;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-check {
+            margin-bottom: 10px;
+        }
+
+            .form-check input {
+                margin-right: 10px;
+            }
+
+        .btn-primary {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+            }
+
+        .link-back {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* New style for form layout */
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+
+        .form-row label {
+            flex: 0 0 25%;
+            font-weight: bold;
+            padding-right: 10px;
+        }
+
+        .form-row input,
+        .form-row select {
+            flex: 0 0 75%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Adjusted style for buttons */
+        .btn-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+    </style></head>
+<body>
+<hr />
+    <div class="container">
+        <h4>PatientInfo</h4>
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-row">
+                <label asp-for="FirstName" class="form-label"></label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-row">
+                <label asp-for="LastName" class="form-label"></label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="form-row">
+                <label asp-for="Sex" class="form-label"></label>
+                <input asp-for="Sex" class="form-control" />
+                <span asp-validation-for="Sex" class="text-danger"></span>
+            </div>
+            <div class="form-row">
+                <label asp-for="Birthday" class="form-label"></label>
+                <input asp-for="Birthday" class="form-control" />
+                <span asp-validation-for="Birthday" class="text-danger"></span>
+            </div>
+            <div class="form-row">
+                <label asp-for="Address" class="form-label"></label>
+                <input asp-for="Address" class="form-control" />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div class="form-row">
+                <label asp-for="ContactNumber" class="form-label"></label>
+                <input asp-for="ContactNumber" class="form-control" />
+                <span asp-validation-for="ContactNumber" class="text-danger"></span>
+            </div>
+            <div class="form-row">
+                <label asp-for="Citizenship" class="form-label"></label>
+                <input asp-for="Citizenship" class="form-control" />
+                <span asp-validation-for="Citizenship" class="text-danger"></span>
+            </div>
+            <div class="form-row">
+                <label asp-for="Ward" class="form-label"></label>
+                <input asp-for="Ward" class="form-control" />
+                <span asp-validation-for="Ward" class="text-danger"></span>
+            </div>
+            <div class="form-row">
+                <label asp-for="Room" class="form-label"></label>
+                <input asp-for="Room" class="form-control" />
+                <span asp-validation-for="Room" class="text-danger"></span>
+            </div>
+            <div class="form-row">
+                <label asp-for="AttendingDoctor" class="form-label"></label>
+                <input asp-for="AttendingDoctor" class="form-control" />
+                <span asp-validation-for="AttendingDoctor" class="text-danger"></span>
+            </div>
+            <div class="form-row">
+                <label asp-for="Dietitian" class="form-label"></label>
+                <input asp-for="Dietitian" class="form-control" />
+                <span asp-validation-for="Dietitian" class="text-danger"></span>
+            </div>
+            <div class="form-row">
+                <label asp-for="NextOfKin" class="form-label"></label>
+                <input asp-for="NextOfKin" class="form-control" />
+                <span asp-validation-for="NextOfKin" class="text-danger"></span>
+            </div>
+            <div class="form-row">
+                <label asp-for="NextOfKinNumber" class="form-label"></label>
+                <input asp-for="NextOfKinNumber" class="form-control" />
+                <span asp-validation-for="NextOfKinNumber" class="text-danger"></span>
+            </div>
+            <div class="form-row">
+                <label asp-for="AdmissionDate" class="form-label"></label>
+                <input asp-for="AdmissionDate" class="form-control" />
+                <span asp-validation-for="AdmissionDate" class="text-danger"></span>
+            </div>
+
+            <div class="btn-container" id="liveAlertPlaceholder">
+                <input type="submit" value="Create" class="btn btn-primary"  data-toggle="modal" data-target="#successModal" />
+                <a asp-action="Index" class="btn btn-primary">Back to List</a>
+               @* <form method="post" asp-action="Create" asp-controller="PatientInfos">
+                    <input type="hidden" asp-for="PatientInfoID" name="patientInfoID" />
+                    <button type="submit" value="Create" class="details-button">Save</button>
+                id="liveAlertBtn"
+                </form>*@
+                @*<a asp-action="Details2" asp-controller="PatientInfos" asp-route-id="@Model?.PatientInfoID" class="btn border-bottom">Advance</a>*@
+            </div>
+             
+        </form>
+    </div>
+   
+</body>
+</html>
+

@@ -1,0 +1,150 @@
+﻿@model healthApp.Models.Nutrition.SGA
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Subjective Global Assessment </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #e1e1e1;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h4 {
+            text-align: center;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-check {
+            margin-bottom: 10px;
+        }
+
+            .form-check input {
+                margin-right: 10px;
+            }
+
+        .btn-primary {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+            }
+
+        .link-back {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h4>Patient Subjective Global Assessement</h4>
+        <hr />
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="WeightLoss" class="control-label">Weight Loss</label>
+                <input asp-for="WeightLoss" class="form-control" />
+                <span asp-validation-for="WeightLoss" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FoodIntake" class="control-label">Food Intake</label>
+                <input asp-for="FoodIntake" class="form-control" />
+                <span asp-validation-for="FoodIntake" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GastrointestinalSymptom" class="control-label">Gastrointestinal Symptom</label>
+                <input asp-for="GastrointestinalSymptom" class="form-control" />
+                <span asp-validation-for="GastrointestinalSymptom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FunctionalCapacity" class="control-label">Functional Capacity</label>
+                <input asp-for="FunctionalCapacity" class="form-control" />
+                <span asp-validation-for="FunctionalCapacity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NutritionalRequirementDisease" class="control-label">Nutritional Requirement Disease</label>
+                <input asp-for="NutritionalRequirementDisease" class="form-control" />
+                <span asp-validation-for="NutritionalRequirementDisease" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhysicalExam" class="control-label">Physical Exam</label>
+                <input asp-for="PhysicalExam" class="form-control" />
+                <span asp-validation-for="PhysicalExam" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <input class="form-check-input" asp-for="EdemaPresence" />
+                <label class="form-check-label"> @Html.DisplayNameFor(model => model.EdemaPresence)</label>
+            </div>
+            <div class="form-group">
+                <label asp-for="AlbuminSGA" class="control-label">Albumin SGA</label>
+                <input asp-for="AlbuminSGA" class="form-control" />
+                <span asp-validation-for="AlbuminSGA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BMI" class="control-label">BMI</label>
+                <input asp-for="BMI" class="form-control" />
+                <span asp-validation-for="BMI" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TIC" class="control-label">TIC</label>
+                <input asp-for="TIC" class="form-control" />
+                <span asp-validation-for="TIC" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TotalScore" class="control-label">Total Score</label>
+                <input asp-for="TotalScore" class="form-control" />
+                <span asp-validation-for="TotalScore" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+               @* <label asp-for="PatientInfoID" class="control-label">Patient Info ID</label>*@
+                @*<select asp-for="PatientInfoID" class="form-control" asp-items="ViewBag.PatientInfoID"></select>*@
+                <input type="hidden" asp-for="PatientInfoID" class="form-control" asp-items="@ViewBag.PatientInfoID" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+        <a asp-action="Index" asp-controller="SGA" asp-route-PatientInfoID="@ViewBag.PatientInfoID" class="btn-secondary">Cancel</a>
+    </div>
+
+</body>
+</html>
+

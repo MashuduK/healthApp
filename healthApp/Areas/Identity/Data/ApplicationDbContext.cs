@@ -1,4 +1,5 @@
 ﻿
+using healthApp.Models.Nutrition;
 using healthApp.Areas.Identity.Data;
 using healthApp.Models;
 using Microsoft.AspNetCore.Identity;
@@ -20,6 +21,22 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     public DbSet<Appointment> Appointments { get; set; }
     public DbSet<Announcement> Announcements { get; set; }
     public DbSet<Complaint> Complaints { get; set; }
+
+    //Nutrition
+
+    public DbSet<PatientInfo> PatientInfos { get; set; }
+    public DbSet<SocialH> SocialHistory { get; set; }
+    public DbSet<FamilyH> FamilyHistory { get; set; }
+    public DbSet<SGA> SGA { get; set; }
+    public DbSet<Screening> Screening { get; set; }
+    public DbSet<Screening2> Screening2 { get; set; }
+    public DbSet<MacroNutrients> MacroNutrients { get; set; }
+    public DbSet<Biochemicals> Biochemicals { get; set; }
+    public DbSet<Anthropometry> Antropometry { get; set; }
+    public DbSet<FoodItems> FoodItems { get; set; }
+    public DbSet<FoodExchange> FoodExchange { get; set; }
+    public virtual DbSet<FoodExchange> DietFood { get; set; }
+    public DbSet<DietaryInfo> DietaryInfo { get; set; }
 
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
     : base(options)

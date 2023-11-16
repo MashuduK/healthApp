@@ -1,0 +1,247 @@
+﻿@model healthApp.Models.Nutrition.Biochemicals
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #e1e1e1;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h4 {
+            text-align: center;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-check {
+            margin-bottom: 10px;
+        }
+
+            .form-check input {
+                margin-right: 10px;
+            }
+
+        .btn-primary {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+            }
+
+        .link-back {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #e1e1e1;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h4 {
+            text-align: center;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-check {
+            margin-bottom: 10px;
+        }
+
+            .form-check input {
+                margin-right: 10px;
+            }
+
+        .btn-primary {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+            }
+
+        .link-back {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h4>Biochemicals</h4>
+<hr />
+<div class="row">
+    <div class="container">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="BioID" />
+            <div class="form-group">
+                <label asp-for="SmokingFrequency" class="control-label"></label>
+                <input asp-for="SmokingFrequency" class="form-control" />
+                <span asp-validation-for="SmokingFrequency" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="uricAcid" class="control-label"></label>
+                <input asp-for="uricAcid" class="form-control" />
+                <span asp-validation-for="uricAcid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cholesterol" class="control-label"></label>
+                <input asp-for="cholesterol" class="form-control" />
+                <span asp-validation-for="cholesterol" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="totalProtein" class="control-label"></label>
+                <input asp-for="totalProtein" class="form-control" />
+                <span asp-validation-for="totalProtein" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="albumin" class="control-label"></label>
+                <input asp-for="albumin" class="form-control" />
+                <span asp-validation-for="albumin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="globulin" class="control-label"></label>
+                <input asp-for="globulin" class="form-control" />
+                <span asp-validation-for="globulin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="amylase" class="control-label"></label>
+                <input asp-for="amylase" class="form-control" />
+                <span asp-validation-for="amylase" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="lipase" class="control-label"></label>
+                <input asp-for="lipase" class="form-control" />
+                <span asp-validation-for="lipase" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="hemoglobin" class="control-label"></label>
+                <input asp-for="hemoglobin" class="form-control" />
+                <span asp-validation-for="hemoglobin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="sodium" class="control-label"></label>
+                <input asp-for="sodium" class="form-control" />
+                <span asp-validation-for="sodium" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="potassium" class="control-label"></label>
+                <input asp-for="potassium" class="form-control" />
+                <span asp-validation-for="potassium" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="calcium" class="control-label"></label>
+                <input asp-for="calcium" class="form-control" />
+                <span asp-validation-for="calcium" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="magnesium" class="control-label"></label>
+                <input asp-for="magnesium" class="form-control" />
+                <span asp-validation-for="magnesium" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ammonia" class="control-label"></label>
+                <input asp-for="ammonia" class="form-control" />
+                <span asp-validation-for="ammonia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="bleedingTime" class="control-label"></label>
+                <input asp-for="bleedingTime" class="form-control" />
+                <span asp-validation-for="bleedingTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="clottingTime" class="control-label"></label>
+                <input asp-for="clottingTime" class="form-control" />
+                <span asp-validation-for="clottingTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                @*<label asp-for="PatientInfoID" class="control-label"></label>
+                <select asp-for="PatientInfoID" class="form-control" asp-items="ViewBag.PatientInfoID"></select>
+                <span asp-validation-for="PatientInfoID" class="text-danger"></span>*@
+                  @*   <input type="hidden" asp-for="PatientInfoID" class="form-control" asp-items="@ViewBag.PatientInfoID" /> *@
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+        <a asp-controller="PatientInfos" asp-action="Details2" asp-route-PatientInfoID="@ViewBag.PatientInfoID">Back</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+</body>
+</html>

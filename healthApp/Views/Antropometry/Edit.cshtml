@@ -1,0 +1,217 @@
+﻿@model healthApp.Models.Nutrition.Anthropometry
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #e1e1e1;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h4 {
+            text-align: center;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-check {
+            margin-bottom: 10px;
+        }
+
+            .form-check input {
+                margin-right: 10px;
+            }
+
+        .btn-primary {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+            }
+
+        .link-back {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #e1e1e1;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h4 {
+            text-align: center;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-check {
+            margin-bottom: 10px;
+        }
+
+            .form-check input {
+                margin-right: 10px;
+            }
+
+        .btn-primary {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+            }
+
+        .link-back {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h4>Anthropometry</h4>
+<hr />
+<div class="row">
+    <div class="container">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="anthroID" />
+            <div class="form-group">
+                <label asp-for="height" class="control-label"></label>
+                <input asp-for="height" class="form-control" />
+                <span asp-validation-for="height" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="currentWeight" class="control-label"></label>
+                <input asp-for="currentWeight" class="form-control" />
+                <span asp-validation-for="currentWeight" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="bmi" class="control-label"></label>
+                <input asp-for="bmi" class="form-control" />
+                <span asp-validation-for="bmi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="usualWeight" class="control-label"></label>
+                <input asp-for="usualWeight" class="form-control" />
+                <span asp-validation-for="usualWeight" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="waistCircumference" class="control-label"></label>
+                <input asp-for="waistCircumference" class="form-control" />
+                <span asp-validation-for="waistCircumference" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="hipCircumference" class="control-label"></label>
+                <input asp-for="hipCircumference" class="form-control" />
+                <span asp-validation-for="hipCircumference" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="armCircumference" class="control-label"></label>
+                <input asp-for="armCircumference" class="form-control" />
+                <span asp-validation-for="armCircumference" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="calfCircumference" class="control-label"></label>
+                <input asp-for="calfCircumference" class="form-control" />
+                <span asp-validation-for="calfCircumference" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="tricepSkinFold" class="control-label"></label>
+                <input asp-for="tricepSkinFold" class="form-control" />
+                <span asp-validation-for="tricepSkinFold" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="subscapularSkinFold" class="control-label"></label>
+                <input asp-for="subscapularSkinFold" class="form-control" />
+                <span asp-validation-for="subscapularSkinFold" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                @*<label asp-for="PatientInfoID" class="control-label"></label>
+                <select asp-for="PatientInfoID" class="form-control" asp-items="ViewBag.PatientInfoID"></select>
+                <span asp-validation-for="PatientInfoID" class="text-danger"></span>*@
+                    <input type="hidden" asp-for="PatientInfoID" class="form-control" asp-items="@ViewBag.PatientInfoID" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+</body>
+</html>
