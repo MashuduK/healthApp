@@ -51,8 +51,8 @@ namespace E_NompiloHealth.Controllers
         [Authorize]
         public ActionResult UpdateProfile(string id)
         {
-            var patient = db.Patients.Single(c => c.ApplicationUserId == id);
-            return View(patient);
+            //var patient = db.Patients.Single(c => c.ApplicationUserId == id);
+            return View();
         }
 
         [HttpPost]
