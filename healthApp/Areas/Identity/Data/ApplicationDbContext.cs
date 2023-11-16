@@ -1,6 +1,7 @@
 ﻿
 using healthApp.Areas.Identity.Data;
 using healthApp.Models;
+using healthApp.Models.FamilyPlanning;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -20,6 +21,16 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     public DbSet<Appointment> Appointments { get; set; }
     public DbSet<Announcement> Announcements { get; set; }
     public DbSet<Complaint> Complaints { get; set; }
+
+    //FamilyPlannign
+    public DbSet<MenstrualCycle> MenstrualCycles { get; set; }
+    public DbSet<ContraceptionReminder>ContraceptionReminders { get; set; }
+    public DbSet<ContraceptionGuideRecord> ContraceptionGuideRecords { get; set; }
+    public DbSet<FertilityTrackerRecord> FertilityTrackerRecords { get; set; }
+
+    //public DbSet<ContraceptiveMethod> ContraceptiveMethods { get; set; }
+    public DbSet<PregnancyCalculatorRecord> PregnancyCalculatorRecords { get; set; }
+
 
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
     : base(options)

@@ -27,11 +27,12 @@
     <header id="Home">
         <nav>
             <div class="row">
-                <img src="~/Content/Layout/resources/img/logo-white.jpg" alt="HMS logo" class="logo">
-                <img src="~/Content/Layout/resources/img/logo.jpg" alt="HMS logo" class="logo-black">
+                <img src="~/Content/Layout/resources/img/logo-white.png" alt="HMS logo" class="logo">
+                <img src="~/Content/Layout/resources/img/logo-black.png" alt="HMS logo" class="logo-black">
                 <ul class="main-nav js-main-nav">
                     <li><a href="#Home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
+                    <li> <a class="nav-link text-dark" asp-area="" asp-controller="FamilyPlanning" asp-action="Index">Family Planning</a></li>
+                    <li><a href="#services">Nutrition</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li class="nav-item">
@@ -48,7 +49,7 @@
             </div>
         </nav>
         <div class="hero-text-box">
-            <h1>Hospital Management<br> System.</h1>
+            <h1>E_Nompilo<br> Healthcare.</h1>
             <br>
             <a class="btn btn-ghost js-scroll-to-start" href="#">Show me more</a>
         </div>
@@ -60,13 +61,15 @@ else
     <header id="Home">
         <nav>
             <div class="row">
-                <img src="~/Content/Layout/resources/img/logo-white.jpg" alt="HMS logo" class="logo">
-                <img src="~/Content/Layout/resources/img/logo.jpg" alt="HMS logo" class="logo-black">
+                <img src="~/Content/Layout/resources/img/logo-white.png" alt="HMS logo" class="logo">
+                <img src="~/Content/Layout/resources/img/logo-black.png" alt="HMS logo" class="logo-black">
                 <ul class="main-nav js-main-nav">
                     <li><a href="#Home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
+                    <li><a href="#services">Family Planning</a></li>
+                    <li><a href="#services">Nutrition</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li class="nav-item">
                     <li>  <a class="nav-link text-dark" id="register" asp-area="Identity" asp-page="/Account/Register">Register</a></li>
                     <li> <a class="nav-link text-dark" id="login" asp-area="Identity" asp-page="/Account/Login">Login</a></li>
                 </ul>
@@ -74,7 +77,7 @@ else
             </div>
         </nav>
         <div class="hero-text-box">
-            <h1>Hospital Management<br> System.</h1>
+            <h1>E_Nompilo<br> Healthcare.</h1>
             <br>
             <a class="btn btn-ghost js-scroll-to-start" href="#">Show me more</a>
         </div>
@@ -83,7 +86,7 @@ else
     <section class="section-features js-section-features" id="services">
         <div class="row">
             <h2>Services</h2>
-            <p class="long-copy">Hello, this is Hospital Management System. We have best services for our patients and manage them.</p>
+            <p class="long-copy">Hello, this is E_NompiloHealthcare. We have best services for our patients and manage them.</p>
         </div>
         <div class="row js-wp-1">
             <div class="col span-1-of-4 box for-icons">
@@ -109,6 +112,7 @@ else
                 <i class="icon ion-md-checkmark-circle-outline"></i>
                 <h3>Appointment</h3>
                 <p>We are happy to announce that our online appointment booking system is developed and launched. Please check back soon for more updates.</p>
+                <button><a class="nav-link text-dark" asp-area="" asp-controller="Patient" asp-action="AddAppointment">BOOK appointment</a></button>
             </div>
         </div>
     </section>
@@ -124,7 +128,7 @@ else
             <div class="col span-1-of-2 step-box">
                 <div class="works-step">
                     <div>1</div>
-                    <p>Hopital Management System (HMS) is open to all patients every day and provides fundamental medical care and cutting-edge medicine.</p>
+                    <p>E_Nompilo Healthcare is open to all patients every day and provides fundamental medical care and cutting-edge medicine.</p>
                 </div>
                 <div class="works-step">
                     <div>2</div>
