@@ -376,53 +376,53 @@ namespace healthApp.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> AddDoctor(DoctorCollection model)
-        {
-            var user = new ApplicationUser
-            {
-                UserName = model.ApplicationUser.FirstName,
-                Email = model.ApplicationUser.Email,
-                UserRole = "Doctor",
-                RegisteredDate = DateTime.Now.Date
-            };
-            //var result = await UserManager.CreateAsync(user, model.ApplicationUser.Password);
-            //var userManager = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
+        //public async Task<ActionResult> AddDoctor(DoctorCollection model)
+        //{
+        //    var user = new ApplicationUser
+        //    {
+        //        UserName = model.ApplicationUser.FirstName,
+        //        Email = model.ApplicationUser.Email,
+        //        UserRole = "Doctor",
+        //        RegisteredDate = DateTime.Now.Date
+        //    };
+        //    //var result = await UserManager.CreateAsync(user, model.ApplicationUser.Password);
+        //    //var userManager = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
 
-            var result = await userManager.CreateAsync(user, model.ApplicationUser.Password);
+        //    var result = await userManager.CreateAsync(user, model.ApplicationUser.Password);
 
-            await userManager.AddToRoleAsync(user, "Doctor");
+        //    await userManager.AddToRoleAsync(user, "Doctor");
 
-            if (result.Succeeded)
-            {
-                //await userManager.AddToRoleAsync(user.Id, "Doctor");
+        //    if (result.Succeeded)
+        //    {
+        //        //await userManager.AddToRoleAsync(user.Id, "Doctor");
 
-                var doctor = new Doctor
-                {
-                    FirstName = model.Doctor.FirstName,
-                    LastName = model.Doctor.LastName,
-                    FullName = "Dr. " + model.Doctor.FirstName + " " + model.Doctor.LastName,
-                    EmailAddress = model.ApplicationUser.Email,
-                    ContactNo = model.Doctor.ContactNo,
-                    PhoneNo = model.Doctor.PhoneNo,
-                    Designation = model.Doctor.Designation,
-                    Education = model.Doctor.Education,
-                    DepartmentId = model.Doctor.DepartmentId,
-                    Specialization = model.Doctor.Specialization,
-                    Gender = model.Doctor.Gender,
-                    BloodGroup = model.Doctor.BloodGroup,
-                    ApplicationUserId = user.Id,
-                    DateOfBirth = model.Doctor.DateOfBirth,
-                    Address = model.Doctor.Address,
-                    Status = model.Doctor.Status
-                };
+        //        var doctor = new Doctor
+        //        {
+        //            FirstName = model.Doctor.FirstName,
+        //            LastName = model.Doctor.LastName,
+        //            FullName = "Dr. " + model.Doctor.FirstName + " " + model.Doctor.LastName,
+        //            EmailAddress = model.ApplicationUser.Email,
+        //            ContactNo = model.Doctor.ContactNo,
+        //            PhoneNo = model.Doctor.PhoneNo,
+        //            Designation = model.Doctor.Designation,
+        //            Education = model.Doctor.Education,
+        //            DepartmentId = model.Doctor.DepartmentId,
+        //            Specialization = model.Doctor.Specialization,
+        //            Gender = model.Doctor.Gender,
+        //            BloodGroup = model.Doctor.BloodGroup,
+        //            ApplicationUserId = user.Id,
+        //            DateOfBirth = model.Doctor.DateOfBirth,
+        //            Address = model.Doctor.Address,
+        //            Status = model.Doctor.Status
+        //        };
 
-                db.Doctors.Add(doctor);
-                db.SaveChanges();
-                return RedirectToAction("ListOfDoctors");
-            }
+        //        db.Doctors.Add(doctor);
+        //        db.SaveChanges();
+        //        return RedirectToAction("ListOfDoctors");
+        //    }
 
-            return HttpNotFound();
-        }
+        //    return HttpNotFound();
+        //}
 
         private ActionResult HttpNotFound()
         {
