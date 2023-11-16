@@ -25,7 +25,7 @@ namespace E_NompiloHealth.Controllers
             db.Dispose();
         }
 
-        [Authorize(Roles = "Patient")]
+        //[Authorize(Roles = "Patient")]
         public ActionResult Index(string message)
         {
             ViewBag.Messege = message;
@@ -47,8 +47,8 @@ namespace E_NompiloHealth.Controllers
             return View(model);
         }
 
-        //Update Patient profile
-        [Authorize(Roles = "Patient")]
+        ////Update Patient profile
+        //[Authorize(Roles = "Patient")]
         public ActionResult UpdateProfile(string id)
         {
             var patient = db.Patients.Single(c => c.ApplicationUserId == id);
@@ -76,8 +76,8 @@ namespace E_NompiloHealth.Controllers
 
         //Start Appointment Section
 
-        //Add Appointment
-        [Authorize(Roles = "Patient")]
+        ////Add Appointment
+        //[Authorize(Roles = "Patient")]
         public ActionResult AddAppointment()
         {
             var collection = new AppointmentCollection

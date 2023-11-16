@@ -1,0 +1,16 @@
+﻿@model healthApp.Models.FamilyPlanning.ContraceptionReminder
+
+<h2>Set Contraception Reminder</h2>
+
+@using (Html.BeginForm("SetReminder", "Contraception", FormMethod.Post))
+{
+    <label for="Method">Contraception Method:</label>
+    <input type="text" name="Method" required />
+
+    <label for="NextReminderDate">Next Reminder Date:</label>
+    <input type="date" name="NextReminderDate" required />
+
+    <!-- Add other relevant input fields -->
+
+    <button type="submit">Set Reminder</button>
+}

@@ -1,0 +1,21 @@
+﻿@model List<healthApp.Models.FamilyPlanning.MenstrualCycle>
+
+<h2>Menstrual Cycles</h2>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <!-- Add other relevant headers -->
+    </tr>
+    @foreach (var cycle in Model)
+    {
+        <tr>
+            <td>@cycle.Id</td>
+            <td>@cycle.StartDate.ToShortDateString()</td>
+            <td>@cycle.EndDate.ToShortDateString()</td>
+            <!-- Add other relevant data -->
+        </tr>
+    }
+</table>

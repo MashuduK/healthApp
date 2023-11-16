@@ -1,0 +1,16 @@
+﻿@model healthApp.Models.FamilyPlanning.MenstrualCycle
+
+<h2>Add Menstrual Cycle</h2>
+
+@using (Html.BeginForm("AddCycle", "MenstrualCycle", FormMethod.Post))
+{
+    <label for="StartDate">Start Date:</label>
+    <input type="date" name="StartDate" required />
+
+    <label for="EndDate">End Date:</label>
+    <input type="date" name="EndDate" required />
+
+    <!-- Add other relevant input fields -->
+
+    <button type="submit">Add Cycle</button>
+}
