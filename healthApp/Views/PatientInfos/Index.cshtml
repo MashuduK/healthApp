@@ -247,21 +247,25 @@
 </head>
 <body>
     <div class="navbar">
-        <a asp-action="NuDeshboard" asp-controller="Home">Nutrition Deshboard</a>
+        <a asp-action="NutritionDeshboard" asp-controller="Home">Nutrition Deshboard</a>
         <a asp-action="Index" asp-controller="Home">Home</a>
         
         <div class="nav-item dropdown">
             <button class="dropbtn">Services</button>
             <div class="dropdown-content">
-                <a class="dropdown-item" href="#">Diet</a>
-                <a class="dropdown-item" href="#">Equaptment Guide</a>
-                <a class="dropdown-item" href="#">General Reports</a>
+                <a class="dropdown-item" asp-action="FoodExchangeReport" asp-controller="Report">Diet</a>
+                <a class="dropdown-item" asp-action="ToolsDashboard" asp-controller="Home">Manual Guide</a>
+                <a class="dropdown-item" asp-action="ReportDeshboard" asp-controller="Home">General Reports</a>
             </div>
         </div>
         <div class="search-container">
-            <form action="#">
-                <input type="text" placeholder="Search by PatientInfoID..." name="search">
-                <button type="submit">Search</button>
+            <form asp-controller="PatientInfos" asp-action="SearchPatient" method="post">
+                <div class="form-group">
+                    <label for="patientInfoID">Patient ID:</label>
+                    <input type="text" id="patientInfoID" name="patientInfoID" class="form-control" />
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </div>
+               
             </form>
         </div>
       

@@ -120,7 +120,7 @@ namespace healthApp.Controllers.Nutrition
         }
 
         // GET: DietaryInfoController/Delete/5
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)

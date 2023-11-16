@@ -245,7 +245,7 @@ namespace healthApp.Controllers.Nutrition
             }
             return View(DietFood);
         }
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)

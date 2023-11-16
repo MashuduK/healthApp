@@ -311,7 +311,7 @@
         <div class="nav-item">
 
 
-            <a asp-action="Index" asp-controller="Home">Diets</a>
+            <a asp-action="FoodExchangeReport" asp-controller="Report">Diets</a>
         </div>
         <div class="nav-item">
 
@@ -324,9 +324,13 @@
             <a asp-action="ReportDeshboard" asp-controller="Home">Reports</a>
         </div>
         <div class="search-container">
-            <form action="#">
-                <input type="text" placeholder="Search by PatientInfoID..." name="search">
-                <button type="submit">Search</button>
+            <form asp-controller="PatientInfos" asp-action="SearchPatient" method="post">
+                <div class="form-group">
+                    <label for="patientInfoID">Patient ID:</label>
+                    <input type="text" id="patientInfoID" name="patientInfoID" class="form-control" />
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </div>
+
             </form>
         </div>
 

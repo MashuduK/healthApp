@@ -1,5 +1,6 @@
 ﻿using healthApp.Areas.Identity.Data;
 using healthApp.Models.Nutrition;
+using iText.Commons.Actions.Contexts;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -14,6 +15,31 @@ namespace healthApp.Controllers.Nutrition
         public PatientInfosController(ApplicationDbContext dbcontext)
         {
             _dbcontext = dbcontext;
+        }
+
+        [HttpGet]
+        public IActionResult SearchPatient()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult SearchPatient(int patientInfoID)
+        {
+            // Search for the patient by PatientInfoID in the database
+            var patient = _dbcontext.PatientInfos.FirstOrDefault(p => p.PatientInfoID == patientInfoID);
+
+            if (patient != null)
+            {
+                // If the patient is found, display the details
+                return View("Details2", patient);
+            }
+            else
+            {
+                // If the patient is not found, display an error message
+                ModelState.AddModelError(string.Empty, "Patient not found.");
+                return View();
+            }
         }
 
         // GET: PatientInfos
