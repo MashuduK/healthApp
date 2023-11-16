@@ -1,0 +1,25 @@
+﻿@model List<healthApp.Models.FamilyPlanning.ContraceptionReminder>
+
+<h2>Contraception Reminders</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Reminder ID</th>
+            <th>User Name</th>
+            <th>Reminder Date</th>
+            <th>Contraception Type</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var reminder in Model)
+        {
+            <tr>
+                <td>@reminder.ReminderID</td>
+                <td>@reminder.UserName</td>
+                <td>@reminder.ReminderDate</td>
+                <td>@reminder.ContraceptionType</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -32,10 +32,12 @@
                 <ul class="main-nav js-main-nav">
                     <li><a href="#Home">Home</a></li>
                     <li> <a class="nav-link text-dark" asp-area="" asp-controller="FamilyPlanning" asp-action="Index">Family Planning</a></li>
-                    <li><a href="#services">Nutrition</a></li>
+                    <li> <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="NutritionDeshboard">Nutrition</a></li>
+
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a asp-action="NutritionDeshboard" asp-controller="Home">Nutrition</a></li>
+                  
+                 
                     <li class="nav-item">
                         <a id="manage" class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @UserManager.FindByNameAsync(User.Identity.Name).Result.FirstName!</a>
                     </li>
@@ -66,8 +68,8 @@ else
                 <img src="~/Content/Layout/resources/img/logo-black.png" alt="HMS logo" class="logo-black">
                 <ul class="main-nav js-main-nav">
                     <li><a href="#Home">Home</a></li>
-                    <li><a href="#services">Family Planning</a></li>
-                    <li><a href="#services">Nutrition</a></li>
+                    <li> <a class="nav-link text-dark" asp-area="" asp-controller="FamilyPlanning" asp-action="Index">Family Planning</a></li>
+                    <li> <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="NutritionDeshboard">Nutrition</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li class="nav-item">
@@ -124,7 +126,7 @@ else
         </div>
         <div class="row">
             <div class="col span-1-of-2 step-box">
-                <img src="~/Content/Layout/resources/img/app-iPhone.png" alt="Omnifood app on iphone" class="app-screen js-wp-2">
+                <img src="~/Content/Layout/resources/img/Boost your inmune system-amico.png" alt="Omnifood app on iphone" class="app-screen js-wp-2">
             </div>
             <div class="col span-1-of-2 step-box">
                 <div class="works-step">

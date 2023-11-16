@@ -1,39 +1,4 @@
-﻿@*@{
-    ViewBag.Title = "Family Planning Home";
-}
-
-
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Family Planning Home Page</title>
-</head>
-<body>
-    <h1>Family Planning Home Page</h1>
-
-    <p>Welcome to the family planning home page. Here you can learn about different family planning methods, track your menstrual cycle, set reminders for contraception, and access educational resources.</p>
-
-    <h2>Get Started</h2>
-
-    <ul>
-        <li>@Html.ActionLink("Educational Resources", "Education", "FamilyPlanning")</li>
-        <li>@Html.ActionLink("Menstrual Cycle Tracker", "MenstrualCycle", "FamilyPlanning")</li>
-        <li>@Html.ActionLink("Contraception Reminders", "Contraception", "FamilyPlanning")</li>
-    </ul>
-
-    <h2>Learn More</h2>
-
-    <p>Visit the following websites to learn more about family planning:</p>
-
-    <ul>
-        <li><a href="https://www.plannedparenthood.org/learn/birth-control">Planned Parenthood</a></li>
-        <li><a href="https://www.cdc.gov/reproductivehealth/contraception/">Centers for Disease Control and Prevention</a></li>
-        <li><a href="https://www.who.int/reproductivehealth/topics/family_planning/en/">World Health Organization</a></li>
-    </ul>
-</body>
-</html>*@
-@*
+﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
@@ -101,14 +66,14 @@
         }
 
         /* .container {
-                            max-width: 500px;
-                            margin: 0 auto;
-                            padding: 20px;
-                            background-color: #ffffff;
-                            border: 1px solid #e1e1e1;
-                            border-radius: 5px;
-                            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-                        }*/
+                    max-width: 500px;
+                    margin: 0 auto;
+                    padding: 20px;
+                    background-color: #ffffff;
+                    border: 1px solid #e1e1e1;
+                    border-radius: 5px;
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                }*/
 
         h4 {
             text-align: center;
@@ -337,22 +302,22 @@
             <a asp-action="Index" asp-controller="Home">Home</a>
         </div>
         <div class="nav-item">
-            <a>@Html.ActionLink("Educational Resources", "Education", "FamilyPlanning")</a>
+            <a >@Html.ActionLink("Educational Resources", "Education", "FamilyPlanning")</a>
 
-@*
-            <a asp-action="Index" asp-controller="Education">Educational Resources</a>*@
+
+            <a asp-action="Index" asp-controller="Education">Educational Resources</a>
         </div>
 
 
         <div class="nav-item">
-            @Html.ActionLink("Menstrual Cycle Tracker", "MenstrualCycle", "FamilyPlanning")
-@*
-            <a asp-action="Index" asp-controller="Home">Diets</a>*@
+
+
+            <a asp-action="Index" asp-controller="Home">Diets</a>
         </div>
         <div class="nav-item">
-            <a asp-action="AddReminder" asp-controller="Reminders">Reminders</a>
-           @* <li>@Html.ActionLink("Contraception Reminders", "Contraception", "FamilyPlanning")</li>*@
-            @*<a asp-action="ToolsDashboard" asp-controller="Home">Manuals</a>*@
+
+
+            <a asp-action="ToolsDashboard" asp-controller="Home">Manuals</a>
         </div>
         <div class="nav-item">
 
@@ -397,11 +362,11 @@
                 <div class="card h-100 text-center">
                     <img src="~/css/tools.jpg" class="card-img-top" alt="Equipment Guide">
                     <div class="card-body">
-                        <h5 class="card-title">Menstrual Cycle Tracker</h5>
-                        <p class="card-text">Do entries to track your cycle</p>
+                        <h5 class="card-title">Equipment Guide</h5>
+                        <p class="card-text">Manuals for all equipment.</p>
                     </div>
                     <div class="card-footer">
-                        <a asp-action="ToolsDashboard" asp-controller="Home" class="btn btn-primary">Menstrual Cycle Tracker</a>
+                        <a asp-action="ToolsDashboard" asp-controller="Home" class="btn btn-primary">Equipment</a>
                     </div>
                 </div>
             </div>
@@ -421,7 +386,6 @@
     </div>
 </body>
 </html>
-
 
 
 
