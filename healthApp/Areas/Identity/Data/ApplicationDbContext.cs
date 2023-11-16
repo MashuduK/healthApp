@@ -2,6 +2,7 @@
 using healthApp.Models.Nutrition;
 using healthApp.Areas.Identity.Data;
 using healthApp.Models;
+using healthApp.Models.FamilyPlanning;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -22,21 +23,33 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     public DbSet<Announcement> Announcements { get; set; }
     public DbSet<Complaint> Complaints { get; set; }
 
-    //Nutrition
+//<<<<<<< HEAD
+//    //Nutrition
 
-    public DbSet<PatientInfo> PatientInfos { get; set; }
-    public DbSet<SocialH> SocialHistory { get; set; }
-    public DbSet<FamilyH> FamilyHistory { get; set; }
-    public DbSet<SGA> SGA { get; set; }
-    public DbSet<Screening> Screening { get; set; }
-    public DbSet<Screening2> Screening2 { get; set; }
-    public DbSet<MacroNutrients> MacroNutrients { get; set; }
-    public DbSet<Biochemicals> Biochemicals { get; set; }
-    public DbSet<Anthropometry> Antropometry { get; set; }
-    public DbSet<FoodItems> FoodItems { get; set; }
-    public DbSet<FoodExchange> FoodExchange { get; set; }
-    public virtual DbSet<FoodExchange> DietFood { get; set; }
-    public DbSet<DietaryInfo> DietaryInfo { get; set; }
+//    public DbSet<PatientInfo> PatientInfos { get; set; }
+//    public DbSet<SocialH> SocialHistory { get; set; }
+//    public DbSet<FamilyH> FamilyHistory { get; set; }
+//    public DbSet<SGA> SGA { get; set; }
+//    public DbSet<Screening> Screening { get; set; }
+//    public DbSet<Screening2> Screening2 { get; set; }
+//    public DbSet<MacroNutrients> MacroNutrients { get; set; }
+//    public DbSet<Biochemicals> Biochemicals { get; set; }
+//    public DbSet<Anthropometry> Antropometry { get; set; }
+//    public DbSet<FoodItems> FoodItems { get; set; }
+//    public DbSet<FoodExchange> FoodExchange { get; set; }
+//    public virtual DbSet<FoodExchange> DietFood { get; set; }
+//    public DbSet<DietaryInfo> DietaryInfo { get; set; }
+//=======
+//    //FamilyPlannign
+//    public DbSet<MenstrualCycle> MenstrualCycles { get; set; }
+//    public DbSet<ContraceptionReminder>ContraceptionReminders { get; set; }
+//    public DbSet<ContraceptionGuideRecord> ContraceptionGuideRecords { get; set; }
+//    public DbSet<FertilityTrackerRecord> FertilityTrackerRecords { get; set; }
+
+//    //public DbSet<ContraceptiveMethod> ContraceptiveMethods { get; set; }
+//    public DbSet<PregnancyCalculatorRecord> PregnancyCalculatorRecords { get; set; }
+
+//>>>>>>> cc18212ce0860394bbf7f326f712a5bff924ffbf
 
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
     : base(options)
