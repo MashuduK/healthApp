@@ -1,53 +1,62 @@
 ﻿using healthApp.Areas.Identity.Data;
 using healthApp.Models.FamilyPlanning;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace healthApp.Controllers.FamilyPlanning
 {
     public class MenstrualCycleController : Controller
     {
-        private ApplicationDbContext dbContext;
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly ApplicationDbContext _context;
 
-        // Action to display the list of menstrual cycles
-        public ActionResult Index()
+        public MenstrualCycleController(UserManager<ApplicationUser> userManager, ApplicationDbContext context)
         {
-            // Retrieve and display menstrual cycle data from the database
-            List<MenstrualCycle> cycles = dbContext.MenstrualCycles.ToList();
-            return View(cycles);
+            _userManager = userManager;
+            _context = context;
+        }
+        public IActionResult Index()
+        {
+            var user = _userManager.GetUserAsync(User).Result;
+            var menstrualCycles = _context.MenstrualCycles.Where(c => c.UserId == user.Id).ToList();
+            return View(menstrualCycles);
         }
 
-        // Action to add a new menstrual cycle (GET)
-        public ActionResult AddCycle()
+        public IActionResult AddMenstrualCycle()
         {
             return View();
         }
 
-        // Action to add a new menstrual cycle (POST)
         [HttpPost]
-        public ActionResult AddCycle(MenstrualCycle cycle)
+        public async Task<IActionResult> AddMenstrualCycle(MenstrualCycleViewModel model)
         {
             if (ModelState.IsValid)
             {
-                // For simplicity, add the cycle to the database
-                dbContext.MenstrualCycles.Add(cycle);
-                dbContext.SaveChanges();
+                var user = await _userManager.GetUserAsync(User);
+                if (user != null)
+                {
+                    var menstrualCycle = new MenstrualCycle
+                    {
+                        UserId = user.Id,
+                        StartDate = model.StartDate,
+                        EndDate = model.EndDate
+                    };
 
-                // Redirect to the menstrual cycle list page
-                return RedirectToAction("Index");
+                    _context.MenstrualCycles.Add(menstrualCycle);
+                    await _context.SaveChangesAsync();
+
+                    return RedirectToAction("MenstrualCycleList");
+                }
             }
 
-            // If the model state is not valid, return to the AddCycle view with validation errors
-            return View(cycle);
+            return View(model);
         }
 
-        protected override void Dispose(bool disposing)
+        public IActionResult MenstrualCycleList()
         {
-            if (disposing)
-            {
-                dbContext.Dispose();
-            }
-            base.Dispose(disposing);
+            var user = _userManager.GetUserAsync(User).Result;
+            var menstrualCycles = _context.MenstrualCycles.Where(c => c.UserId == user.Id).ToList();
+            return View(menstrualCycles);
         }
-
     }
 }

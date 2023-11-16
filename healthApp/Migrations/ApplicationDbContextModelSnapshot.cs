@@ -88,9 +88,6 @@ namespace healthApp.Migrations
                     b.Property<string>("UserRole")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("id")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasIndex("NormalizedEmail")
@@ -282,7 +279,6 @@ namespace healthApp.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ApplicationUserId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("BloodGroup")
@@ -316,7 +312,6 @@ namespace healthApp.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FullName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Gender")
@@ -441,13 +436,22 @@ namespace healthApp.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
+                    b.Property<string>("ApplicationUserId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<DateTime>("EndDate")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("ApplicationUserId");
 
                     b.ToTable("MenstrualCycles");
                 });
@@ -1578,9 +1582,7 @@ namespace healthApp.Migrations
                 {
                     b.HasOne("healthApp.Areas.Identity.Data.ApplicationUser", "ApplicationUser")
                         .WithMany()
-                        .HasForeignKey("ApplicationUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ApplicationUserId");
 
                     b.HasOne("healthApp.Models.Department", "Department")
                         .WithMany()
@@ -1591,6 +1593,13 @@ namespace healthApp.Migrations
                     b.Navigation("ApplicationUser");
 
                     b.Navigation("Department");
+                });
+
+            modelBuilder.Entity("healthApp.Models.FamilyPlanning.MenstrualCycle", b =>
+                {
+                    b.HasOne("healthApp.Areas.Identity.Data.ApplicationUser", null)
+                        .WithMany("MenstrualCycles")
+                        .HasForeignKey("ApplicationUserId");
                 });
 
             modelBuilder.Entity("healthApp.Models.Nutrition.Anthropometry", b =>
@@ -1798,6 +1807,11 @@ namespace healthApp.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("healthApp.Areas.Identity.Data.ApplicationUser", b =>
+                {
+                    b.Navigation("MenstrualCycles");
                 });
 
             modelBuilder.Entity("healthApp.Models.Nutrition.PatientInfo", b =>

@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using healthApp.Models.FamilyPlanning;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
@@ -22,6 +23,7 @@ public class ApplicationUser : IdentityUser
     public string LastName { get; set; }
     public string? UserRole { get; set; }
     public DateTime RegisteredDate { get; set; }
+    public ICollection<MenstrualCycle> MenstrualCycles { get; set; }
 
     public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
     {

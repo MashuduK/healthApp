@@ -1,0 +1,35 @@
+﻿@model IEnumerable<healthApp.Models.FamilyPlanning.ContraceptionGuideRecord>
+
+@{
+    ViewData["Title"] = "Contraception Guide";
+}
+
+<h1>Contraception Guide</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Contraception Type</th>
+            <th>Effectiveness</th>
+            <th>Side Effects</th>
+            <th>Cost</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var contraceptionGuideRecord in Model)
+        {
+            <tr>
+                <td>@contraceptionGuideRecord.ContraceptionType</td>
+                <td>@contraceptionGuideRecord.Effectiveness</td>
+                <td>@contraceptionGuideRecord.SideEffects</td>
+                <td>@contraceptionGuideRecord.Cost</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@contraceptionGuideRecord.Id">Details</a> |
+                    <a asp-action="Edit" asp-route-id="@contraceptionGuideRecord.Id">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@contraceptionGuideRecord.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

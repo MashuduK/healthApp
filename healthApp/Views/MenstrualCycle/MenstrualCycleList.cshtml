@@ -1,0 +1,23 @@
+﻿@model IEnumerable<healthApp.Models.FamilyPlanning.MenstrualCycleViewModel>
+
+<h2>Menstrual Cycle List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <!-- Add additional columns as needed -->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cycle in Model)
+        {
+            <tr>
+                <td>@cycle.StartDate</td>
+                <td>@cycle.EndDate</td>
+                <!-- Add additional columns as needed -->
+            </tr>
+        }
+    </tbody>
+</table>

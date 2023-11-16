@@ -326,6 +326,30 @@
                 background-color: #c82333;
                 border-color: #bd2130;
             }
+
+        .box img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .city-feature {
+            margin-bottom: 5px;
+        }
+
+        .small-icons {
+            display: inline-block;
+            width: 30px;
+            text-align: center;
+            color: #30a5ff;
+            font-size: 120%;
+            /*secret to align text and icons*/
+            line-height: 120%;
+            vertical-align: middle;
+            margin-top: -5px;
+            margin-right: 10px;
+        }
+
     </style>
     <title>Family Planning Dashboard</title>
 </head>
@@ -340,6 +364,12 @@
             <a>@Html.ActionLink("Educational Resources", "Education", "FamilyPlanning")</a>
 
 @*
+            <a asp-action="Index" asp-controller="Education">Educational Resources</a>*@
+        </div>
+        <div class="nav-item">
+            <a asp-action="AddAppointment" asp-controller="Patient">Request Appointment</a>
+
+            @*
             <a asp-action="Index" asp-controller="Education">Educational Resources</a>*@
         </div>
 
@@ -371,7 +401,7 @@
         <div class="row">
             <div class="col-md-3 mb-4">
                 <div class="card h-100 text-center">
-                    <img src="~/css/patient.jpg" class="card-img-top" alt="Patients">
+                    <img src="~/css/Hospital family visit-rafiki.png" class="card-img-top" alt="Patients">
                     <div class="card-body">
                         <h5 class="card-title">Patients</h5>
                         <p class="card-text">To perform nutritionist/Dietitian duties.</p>
@@ -383,25 +413,37 @@
             </div>
             <div class="col-md-3 mb-4">
                 <div class="card h-100 text-center">
-                    <img src="~/css/female-patient-eating-a-diet-meal.jpg" class="card-img-top" alt="Modified Diets">
+                    <img src="~/css/Contraception methods-amico.png" class="card-img-top" alt="Contraception">
                     <div class="card-body">
-                        <h5 class="card-title">Modified Diets</h5>
-                        <p class="card-text">Pre configure Diets and Dietary meals.</p>
+                        <h5 class="card-title">Contraception Guide</h5>
+                        <p class="card-text">Contraceptive methods and information.</p>
                     </div>
                     <div class="card-footer">
-                        <a asp-action="Index" asp-controller="PatientInfos" class="btn btn-primary">Diets</a>
+                        <a asp-action="Index" asp-controller="ContraceptionGuide" class="btn btn-primary">Contretion Guide</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-3 mb-4">
                 <div class="card h-100 text-center">
-                    <img src="~/css/tools.jpg" class="card-img-top" alt="Equipment Guide">
+                    <img src="~/css/tools.jpg" class="card-img-top" alt="Menstrual Cycle Tracker">
                     <div class="card-body">
                         <h5 class="card-title">Menstrual Cycle Tracker</h5>
                         <p class="card-text">Do entries to track your cycle</p>
                     </div>
                     <div class="card-footer">
-                        <a asp-action="ToolsDashboard" asp-controller="Home" class="btn btn-primary">Menstrual Cycle Tracker</a>
+                        <a asp-action="Index" asp-controller="MenstrualCycle" class="btn btn-primary">Menstrual Cycle Tracker</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 text-center">
+                    <img src="~/css/report.jpg" class="card-img-top" alt="General Report">
+                    <div class="card-body">
+                        <h5 class="card-title">General Report</h5>
+                        <p class="card-text">Overall report.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a asp-action="ReportDeshboard" asp-controller="Home" class="btn btn-primary">General Report</a>
                     </div>
                 </div>
             </div>
@@ -419,8 +461,42 @@
             </div>
         </div>
     </div>
+    <section class="section-cities" id="cities">
+        <div class="row">
+            <h2>Visit the following websites to learn more about family planning:</h2>
+        </div>
+        <div class="row js-wp-3">
+            <div class="col span-1-of-4 box">
+                <img src="~/Content/Layout/resources/img/PlannedParent.png" alt="lisbon">
+                <h3><a href="https://www.plannedparenthood.org/learn/birth-control">Planned Parenthood</a></h3>
+                
+            </div>
+            <div class="col span-1-of-4 box">
+                <img src="~/Content/Layout/resources/img/cdc.jpg" alt="lisbon">
+                <h3><a href="https://www.cdc.gov/reproductivehealth/contraception/">Centers for Disease Control and Prevention</a></h3>
+               
+            </div>
+            <div class="col span-1-of-4 box">
+                <img src="~/Content/Layout/resources/img/Faislabad.jpg" alt="lisbon">
+                <h3>Faislabad</h3>
+                <div class="city-feature">
+                    <i class="icon ion-logo-facebook small-icons"></i>
+                    <a href="#">HMS_Faislabad</a>
+                </div>
+            </div>
+            <div class="col span-1-of-4 box">
+                <img src="~/Content/Layout/resources/img/Multan.png" alt="lisbon">
+                <h3>Multan</h3>
+                <div class="city-feature">
+                    <i class="icon ion-logo-facebook small-icons"></i>
+                    <a href="#">HMS_Multan</a>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
+
 
 
 

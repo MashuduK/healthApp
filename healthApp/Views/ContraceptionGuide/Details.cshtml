@@ -1,0 +1,27 @@
+﻿@model healthApp.Models.FamilyPlanning.ContraceptionGuideRecord
+
+@{
+    ViewData["Title"] = "Contraception Guide Details";
+}
+
+<h1>Contraception Guide Details</h1>
+
+<div>
+    <h4>Contraception Type</h4>
+    <p>@Model.ContraceptionType</p>
+</div>
+<div>
+    <h4>Effectiveness</h4>
+    <p>@Model.Effectiveness</p>
+</div>
+<div>
+    <h4>Side Effects</h4>
+    <p>@Model.SideEffects</p>
+</div>
+<div>
+    <h4>Cost</h4>
+    <p>@Model.Cost</p>
+</div>
+
+<a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+<a asp-action="Delete" asp-route-id="@Model.Id">Delete</a>
