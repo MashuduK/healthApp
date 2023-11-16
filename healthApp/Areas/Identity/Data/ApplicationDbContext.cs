@@ -23,6 +23,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     public DbSet<Announcement> Announcements { get; set; }
     public DbSet<Complaint> Complaints { get; set; }
 
+<<<<<<< HEAD
 //<<<<<<< HEAD
 //    //Nutrition
 
@@ -39,6 +40,17 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
 //    public DbSet<FoodExchange> FoodExchange { get; set; }
 //    public virtual DbSet<FoodExchange> DietFood { get; set; }
 //    public DbSet<DietaryInfo> DietaryInfo { get; set; }
+//=======
+//    //FamilyPlannign
+//    public DbSet<MenstrualCycle> MenstrualCycles { get; set; }
+//    public DbSet<ContraceptionReminder>ContraceptionReminders { get; set; }
+//    public DbSet<ContraceptionGuideRecord> ContraceptionGuideRecords { get; set; }
+//    public DbSet<FertilityTrackerRecord> FertilityTrackerRecords { get; set; }
+
+//    //public DbSet<ContraceptiveMethod> ContraceptiveMethods { get; set; }
+//    public DbSet<PregnancyCalculatorRecord> PregnancyCalculatorRecords { get; set; }
+
+//>>>>>>> cc18212ce0860394bbf7f326f712a5bff924ffbf
 //=======
 //    //FamilyPlannign
 //    public DbSet<MenstrualCycle> MenstrualCycles { get; set; }
