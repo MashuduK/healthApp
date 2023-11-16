@@ -9,24 +9,24 @@ namespace healthApp.Models
         public int Id { get; set; }
 
         public ApplicationUser ApplicationUser { get; set; }
-        public string ApplicationUserId { get; set; }
+        public string? ApplicationUserId { get; set; }
 
-        public string FullName { get; set; }
+        public string? FullName { get; set; }
 
         [Required]
         [Display(Name = "First Name")]
-        public string FirstName { get; set; }
+        public string? FirstName { get; set; }
 
         [Required]
         [Display(Name = "Last Name")]
-        public string LastName { get; set; }
+        public string? LastName { get; set; }
 
         [Required]
         [EmailAddress]
-        public string EmailAddress { get; set; }
+        public string? EmailAddress { get; set; }
 
         [Required]
-        public string Designation { get; set; }
+        public string? Designation { get; set; }
 
         public Department Department { get; set; }
         [Display(Name = "Department")]

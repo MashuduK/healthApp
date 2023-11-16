@@ -73,6 +73,6 @@ namespace healthApp.Models.Nutrition
         public DietaryInfo? DietaryInfo { get; set; }
         public FoodExchange? FoodExchange { get; set; }
         public MacroNutrients? MacroNutrients { get; set; }
-
+        public string ApplicationUserId { get; internal set; }
     }
 }

@@ -25,12 +25,12 @@ namespace E_NompiloHealth.Controllers
             db.Dispose();
         }
 
-        //[Authorize(Roles = "Patient")]
+        [Authorize]
         public ActionResult Index(string message)
         {
             ViewBag.Messege = message;
             string user = User.Identity.Name;
-            var patient = db.Patients.Single(c => c.ApplicationUserId == user);
+            //var patient = db.Patients.Single(c => c.ApplicationUserId == user);
             var date = DateTime.Now.Date;
             var model = new CollectionOfAll
             {
@@ -39,8 +39,8 @@ namespace E_NompiloHealth.Controllers
                 Doctors = db.Doctors.ToList(),
                 Patients = db.Patients.ToList(),
                 Medicines = db.Medicines.ToList(),
-                ActiveAppointments = db.Appointments.Where(c => c.Status).Where(c => c.PatientId == patient.Id).Where(c => c.AppointmentDate >= date).ToList(),
-                PendingAppointments = db.Appointments.Where(c => c.Status == false).Where(c => c.PatientId == patient.Id).Where(c => c.AppointmentDate >= date).ToList(),
+                //ActiveAppointments = db.Appointments.Where(c => c.Status).Where(c => c.PatientId == patient.Id).Where(c => c.AppointmentDate >= date).ToList(),
+                //PendingAppointments = db.Appointments.Where(c => c.Status == false).Where(c => c.PatientId == patient.Id).Where(c => c.AppointmentDate >= date).ToList(),
                 AmbulanceDrivers = db.AmbulanceDrivers.ToList(),
                 Announcements = db.Announcements.Where(c => c.AnnouncementFor == "Patient").ToList()
             };
@@ -48,7 +48,7 @@ namespace E_NompiloHealth.Controllers
         }
 
         ////Update Patient profile
-        //[Authorize(Roles = "Patient")]
+        [Authorize]
         public ActionResult UpdateProfile(string id)
         {
             var patient = db.Patients.Single(c => c.ApplicationUserId == id);
@@ -77,7 +77,7 @@ namespace E_NompiloHealth.Controllers
         //Start Appointment Section
 
         ////Add Appointment
-        //[Authorize(Roles = "Patient")]
+        [Authorize]
         public ActionResult AddAppointment()
         {
             var collection = new AppointmentCollection
@@ -119,7 +119,7 @@ namespace E_NompiloHealth.Controllers
         }
 
         //List of Appointments
-        [Authorize(Roles = "Patient")]
+        [Authorize]
         public ActionResult ListOfAppointments()
         {
             string user = User.Identity.Name;
@@ -129,7 +129,7 @@ namespace E_NompiloHealth.Controllers
         }
 
         //Edit Appointment
-        [Authorize(Roles = "Patient")]
+        [Authorize]
         public ActionResult EditAppointment(int id)
         {
             var collection = new AppointmentCollection
@@ -164,7 +164,7 @@ namespace E_NompiloHealth.Controllers
         }
 
         //Delete Appointment
-        [Authorize(Roles = "Patient")]
+        [Authorize]
         public ActionResult DeleteAppointment(int? id)
         {
             var appointment = db.Appointments.Single(c => c.Id == id);
@@ -186,7 +186,7 @@ namespace E_NompiloHealth.Controllers
         //Start Doctor Section
 
         //List of Available Doctors
-        [Authorize(Roles = "Patient")]
+        [Authorize]
         public ActionResult AvailableDoctors()
         {
             var doctor = db.Doctors.Include(c => c.Department).Where(c => c.Status == "Active").ToList();
@@ -213,7 +213,7 @@ namespace E_NompiloHealth.Controllers
 
         //Start Complaint Section
 
-        [Authorize(Roles = "Patient")]
+        [Authorize]
         public ActionResult AddComplain()
         {
             return View();
